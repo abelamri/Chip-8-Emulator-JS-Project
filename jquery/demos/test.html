@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+	<div data-role="page">
+
+		<div data-role="header">
+			<h1>Page Title</h1>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<p><a href="#" class="ui-shadow ui-btn ui-corner-all">Link button</a>
+				<button class="ui-shadow ui-btn ui-corner-all">Button element</button>
+				<input type="button" value="Button element" data-icon="delete" data-theme="a"></p>
+				<label for="slider-flip-m">Mini flip switch:</label>
+				<select name="slider-flip-m" id="slider-flip-m" data-role="slider" data-mini="true">
+					    <option value="off">No</option>
+					    <option value="on" selected="">Yes</option>
+				</select>
+				<label for="select-choice-1" class="select">Select, native menu</label>
+				<select name="select-choice-1" id="select-choice-1">
+				    <option value="standard">Standard: 7 day</option>
+				    <option value="rush">Rush: 3 days</option>
+				    <option value="express">Express: next day</option>
+				    <option value="overnight">Overnight</option>
+				</select>
+			</div><!-- /content -->
+
+			<div data-role="footer">
+				<h4>Page Footer</h4>
+			</div><!-- /footer -->
+		</div><!-- /page -->
+
+	</body>
+	</html>

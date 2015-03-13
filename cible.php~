@@ -1,0 +1,8 @@
+<?php
+
+$retour = array(
+	'succes' => true,
+	'message' => "Vous avez bien été enregistré"
+);
+
+echo json_encode($retour);

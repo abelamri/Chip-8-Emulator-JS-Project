@@ -1,0 +1,31 @@
+$(document).ready(OnReady);
+function OnReady(){
+	$("#form-connect").submit(OnSubmit);
+}
+
+function OnSubmit(){
+	var data = $(this).serialize();
+	$(this).find(':input').prop("disabled", true);
+	$(this).fadeOut( function () {
+		$(this).find(':input').removeAttr("disabled");
+	});
+	$.ajax({
+		type: $(this).attr("method"),
+		url: $(this).attr("action"),
+		data: data,
+		success: OnSuccess
+	});
+	return false;
+}
+
+function OnSuccess(data){
+	if (data.success){
+		$("#result").fadeOut(function () {
+			$(this).html(data.message).fadeIn(2000);
+		});
+	} else {
+		$('#form-souscription').fadeIn(function () {
+			$("#result").html(data.message).fadeIn(2000);
+		});
+	};
+}
